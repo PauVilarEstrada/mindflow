@@ -3,78 +3,170 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#000000">
 <title>MINDFLOW — Política de Privacidad / Privacy Policy</title>
 <style>
-  body{font-family:-apple-system,Segoe UI,Roboto,sans-serif;max-width:760px;margin:0 auto;padding:24px;line-height:1.6;color:#222}
-  h1{font-size:1.6em}h2{font-size:1.2em;margin-top:2em}h3{font-size:1.05em}
-  .lang{border-top:3px solid #5B8DEF;margin-top:3em;padding-top:1em}
-  .updated{color:#777;font-size:.9em}
+  :root{
+    --bg:#000000; --panel:#0d0d0f; --panel2:#141418;
+    --line:#26262c; --text:#f2f2f4; --muted:#9a9aa4;
+    --accent:#7aa2ff; --accent2:#b8c6ff;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0; background:var(--bg); color:var(--text);
+    font-family:-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.7; -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:820px;margin:0 auto;padding:0 22px 80px}
+  header.hero{
+    text-align:center;padding:64px 22px 40px;
+    background:radial-gradient(1200px 400px at 50% -60px,rgba(122,162,255,.14),transparent 70%);
+    border-bottom:1px solid var(--line);
+  }
+  .hero img{
+    width:190px;max-width:60%;height:auto;display:block;margin:0 auto 18px;
+    border-radius:24px;
+    box-shadow:0 0 0 1px var(--line),0 24px 60px -20px rgba(122,162,255,.35);
+  }
+  .brand{
+    font-size:2.6rem;font-weight:800;letter-spacing:.14em;margin:0;
+    background:linear-gradient(180deg,#ffffff,#b8c6ff);
+    -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+  }
+  .tagline{color:var(--muted);margin:8px 0 0;font-size:1rem;font-style:italic}
+  .updated{color:var(--muted);font-size:.85rem;margin-top:18px;letter-spacing:.03em}
+  nav.toc{
+    display:flex;gap:10px;flex-wrap:wrap;justify-content:center;
+    margin:28px auto 0;max-width:640px;
+  }
+  nav.toc a{
+    color:var(--accent2);text-decoration:none;font-size:.82rem;
+    border:1px solid var(--line);border-radius:999px;padding:6px 14px;
+    background:var(--panel);transition:.2s;
+  }
+  nav.toc a:hover{border-color:var(--accent);color:#fff;background:var(--panel2)}
+  section.card{
+    background:linear-gradient(180deg,var(--panel),var(--panel2));
+    border:1px solid var(--line);border-radius:18px;
+    padding:30px 32px;margin-top:26px;
+  }
+  h2{
+    font-size:1.35rem;font-weight:700;margin:0 0 6px;
+    display:flex;align-items:center;gap:12px;
+  }
+  h2 .badge{
+    font-size:.68rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;
+    color:var(--accent2);border:1px solid var(--line);border-radius:6px;
+    padding:3px 8px;background:var(--bg);
+  }
+  h3{
+    font-size:1.02rem;font-weight:600;margin:22px 0 4px;color:#fff;
+    padding-left:14px;border-left:3px solid var(--accent);
+  }
+  p{margin:8px 0;color:var(--text)}
+  .muted{color:var(--muted);font-size:.92rem}
+  strong{color:#fff}
+  a{color:var(--accent)}
+  a:hover{color:var(--accent2)}
+  em{color:var(--accent2);font-style:normal;background:rgba(122,162,255,.1);padding:1px 6px;border-radius:5px}
+  hr.sep{border:0;border-top:1px solid var(--line);margin:30px 0}
+  footer{text-align:center;color:var(--muted);font-size:.8rem;margin-top:50px;padding-top:24px;border-top:1px solid var(--line)}
+  footer a{color:var(--accent2)}
+  @media(max-width:560px){
+    .brand{font-size:2rem}
+    section.card{padding:22px 20px}
+    .hero{padding:44px 18px 30px}
+  }
 </style>
 </head>
 <body>
 
-<h1>MINDFLOW</h1>
-<p class="updated">Última actualización / Last updated: 15/07/2026</p>
+<header class="hero">
+  <img src="data:image/jpeg;base64,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" alt="MINDFLOW logo">
+  <h1 class="brand">MINDFLOW</h1>
+  <p class="tagline">Entrena tu mente, descansa tu cabeza</p>
+  <p class="updated">Última actualización · Last updated: 15/07/2026</p>
+  <nav class="toc">
+    <a href="#priv-es">Privacidad</a>
+    <a href="#terms-es">Términos</a>
+    <a href="#priv-en">Privacy</a>
+    <a href="#terms-en">Terms</a>
+  </nav>
+</header>
 
-<!-- ==================== ESPAÑOL ==================== -->
-<h2>Política de Privacidad (Español)</h2>
-<p>MINDFLOW es un juego de puzles para Android desarrollado por Pau Vilar («el desarrollador»). Esta política explica qué datos se tratan al usar la aplicación.</p>
+<div class="wrap">
 
-<h3>1. Datos que recopilamos</h3>
-<p>MINDFLOW <strong>no recopila, almacena ni comparte datos personales</strong> por sí misma. Todo el progreso del juego (niveles, estrellas, ajustes) se guarda únicamente en tu dispositivo y nunca se envía a servidores del desarrollador.</p>
+<section class="card" id="priv-es">
+  <h2>Política de Privacidad <span class="badge">Español</span></h2>
+  <p class="muted">MINDFLOW es un juego de puzles para Android desarrollado por Pau Vilar («el desarrollador»). Esta política explica qué datos se tratan al usar la aplicación.</p>
 
-<h3>2. Publicidad (Google AdMob)</h3>
-<p>Si tu dispositivo tiene conexión a internet, la aplicación muestra anuncios servidos por <strong>Google AdMob</strong>. Google puede tratar datos como el identificador de publicidad del dispositivo, la dirección IP aproximada y datos de interacción con los anuncios, con fines de publicidad y medición, de acuerdo con la <a href="https://policies.google.com/privacy">Política de Privacidad de Google</a> y la información de <a href="https://support.google.com/admob/answer/6128543">socios publicitarios de Google</a>.</p>
-<p>Si te encuentras en el Espacio Económico Europeo, Reino Unido o Suiza, al iniciar la aplicación se te mostrará el formulario de consentimiento de Google (UMP) para que elijas entre anuncios personalizados o no personalizados. Puedes cambiar tu elección en cualquier momento desde <em>Ajustes → Gestionar consentimiento de anuncios</em>.</p>
+  <h3>1. Datos que recopilamos</h3>
+  <p>MINDFLOW <strong>no recopila, almacena ni comparte datos personales</strong> por sí misma. Todo el progreso del juego (niveles, estrellas, ajustes) se guarda únicamente en tu dispositivo y nunca se envía a servidores del desarrollador.</p>
 
-<h3>3. Permisos</h3>
-<p>La app usa los permisos INTERNET y ACCESS_NETWORK_STATE (solo para anuncios), VIBRATE (respuesta háptica ligera) y AD_ID (identificador de publicidad para AdMob). No accede a contactos, ubicación, cámara, micrófono ni archivos.</p>
+  <h3>2. Publicidad (Google AdMob)</h3>
+  <p>Si tu dispositivo tiene conexión a internet, la aplicación muestra anuncios servidos por <strong>Google AdMob</strong>. Google puede tratar datos como el identificador de publicidad del dispositivo, la dirección IP aproximada y datos de interacción con los anuncios, con fines de publicidad y medición, de acuerdo con la <a href="https://policies.google.com/privacy">Política de Privacidad de Google</a> y la información de <a href="https://support.google.com/admob/answer/6128543">socios publicitarios de Google</a>.</p>
+  <p>Si te encuentras en el Espacio Económico Europeo, Reino Unido o Suiza, al iniciar la aplicación se te mostrará el formulario de consentimiento de Google (UMP) para que elijas entre anuncios personalizados o no personalizados. Puedes cambiar tu elección en cualquier momento desde <em>Ajustes → Gestionar consentimiento de anuncios</em>.</p>
 
-<h3>4. Menores</h3>
-<p>La aplicación no está dirigida específicamente a menores de 6 años y no recopila conscientemente datos de menores.</p>
+  <h3>3. Permisos</h3>
+  <p>La app usa los permisos INTERNET y ACCESS_NETWORK_STATE (solo para anuncios), VIBRATE (respuesta háptica ligera) y AD_ID (identificador de publicidad para AdMob). No accede a contactos, ubicación, cámara, micrófono ni archivos.</p>
 
-<h3>5. Contacto</h3>
-<p>Para cualquier consulta sobre privacidad: <a href="mailto:pvilardev@gmail.com">pvilardev@gmail.com</a></p>
+  <h3>4. Menores</h3>
+  <p>La aplicación no está dirigida específicamente a menores de 6 años y no recopila conscientemente datos de menores.</p>
 
-<h2 id="terms">Términos de Uso (Español)</h2>
-<p>Al usar MINDFLOW aceptas estos términos:</p>
-<p><strong>Licencia.</strong> Se te concede una licencia personal, no exclusiva e intransferible para usar la aplicación con fines de entretenimiento.</p>
-<p><strong>Uso aceptable.</strong> No puedes descompilar, modificar, redistribuir ni explotar comercialmente la aplicación.</p>
-<p><strong>Anuncios.</strong> La aplicación puede mostrar anuncios de terceros (Google AdMob). El desarrollador no es responsable del contenido de dichos anuncios.</p>
-<p><strong>Garantía.</strong> La aplicación se ofrece «tal cual», sin garantías de ningún tipo. El desarrollador no será responsable de daños derivados de su uso.</p>
-<p><strong>Salud.</strong> Las recomendaciones de juego (30 minutos diarios) son orientativas y no constituyen consejo médico.</p>
-<p><strong>Cambios.</strong> Estos términos pueden actualizarse; la versión vigente estará siempre disponible en esta página.</p>
+  <h3>5. Contacto</h3>
+  <p>Para cualquier consulta sobre privacidad: <a href="mailto:pvilardev@gmail.com">pvilardev@gmail.com</a></p>
+</section>
 
-<!-- ==================== ENGLISH ==================== -->
-<div class="lang">
-<h2>Privacy Policy (English)</h2>
-<p>MINDFLOW is an Android puzzle game developed by Pau Vilar ("the developer"). This policy explains what data is processed when you use the app.</p>
+<section class="card" id="terms-es">
+  <h2>Términos de Uso <span class="badge">Español</span></h2>
+  <p class="muted">Al usar MINDFLOW aceptas estos términos:</p>
+  <p><strong>Licencia.</strong> Se te concede una licencia personal, no exclusiva e intransferible para usar la aplicación con fines de entretenimiento.</p>
+  <p><strong>Uso aceptable.</strong> No puedes descompilar, modificar, redistribuir ni explotar comercialmente la aplicación.</p>
+  <p><strong>Anuncios.</strong> La aplicación puede mostrar anuncios de terceros (Google AdMob). El desarrollador no es responsable del contenido de dichos anuncios.</p>
+  <p><strong>Garantía.</strong> La aplicación se ofrece «tal cual», sin garantías de ningún tipo. El desarrollador no será responsable de daños derivados de su uso.</p>
+  <p><strong>Salud.</strong> Las recomendaciones de juego (30 minutos diarios) son orientativas y no constituyen consejo médico.</p>
+  <p><strong>Cambios.</strong> Estos términos pueden actualizarse; la versión vigente estará siempre disponible en esta página.</p>
+</section>
 
-<h3>1. Data we collect</h3>
-<p>MINDFLOW itself <strong>does not collect, store or share any personal data</strong>. All game progress (levels, stars, settings) is stored only on your device and is never sent to the developer's servers.</p>
+<hr class="sep">
 
-<h3>2. Advertising (Google AdMob)</h3>
-<p>If your device is online, the app shows ads served by <strong>Google AdMob</strong>. Google may process data such as your device's advertising identifier, approximate IP address and ad-interaction data for advertising and measurement purposes, in accordance with the <a href="https://policies.google.com/privacy">Google Privacy Policy</a> and <a href="https://support.google.com/admob/answer/6128543">Google's ad partners information</a>.</p>
-<p>If you are in the European Economic Area, the UK or Switzerland, Google's consent form (UMP) will be shown on first launch so you can choose between personalized and non-personalized ads. You can change your choice anytime in <em>Settings → Manage ad consent</em>.</p>
+<section class="card" id="priv-en">
+  <h2>Privacy Policy <span class="badge">English</span></h2>
+  <p class="muted">MINDFLOW is an Android puzzle game developed by Pau Vilar ("the developer"). This policy explains what data is processed when you use the app.</p>
 
-<h3>3. Permissions</h3>
-<p>The app uses INTERNET and ACCESS_NETWORK_STATE (ads only), VIBRATE (light haptic feedback) and AD_ID (advertising identifier for AdMob). It does not access contacts, location, camera, microphone or files.</p>
+  <h3>1. Data we collect</h3>
+  <p>MINDFLOW itself <strong>does not collect, store or share any personal data</strong>. All game progress (levels, stars, settings) is stored only on your device and is never sent to the developer's servers.</p>
 
-<h3>4. Children</h3>
-<p>The app is not specifically directed at children under 6 and does not knowingly collect data from children.</p>
+  <h3>2. Advertising (Google AdMob)</h3>
+  <p>If your device is online, the app shows ads served by <strong>Google AdMob</strong>. Google may process data such as your device's advertising identifier, approximate IP address and ad-interaction data for advertising and measurement purposes, in accordance with the <a href="https://policies.google.com/privacy">Google Privacy Policy</a> and <a href="https://support.google.com/admob/answer/6128543">Google's ad partners information</a>.</p>
+  <p>If you are in the European Economic Area, the UK or Switzerland, Google's consent form (UMP) will be shown on first launch so you can choose between personalized and non-personalized ads. You can change your choice anytime in <em>Settings → Manage ad consent</em>.</p>
 
-<h3>5. Contact</h3>
-<p>For any privacy question: <a href="mailto:pvilardev@gmail.com">pvilardev@gmail.com</a></p>
+  <h3>3. Permissions</h3>
+  <p>The app uses INTERNET and ACCESS_NETWORK_STATE (ads only), VIBRATE (light haptic feedback) and AD_ID (advertising identifier for AdMob). It does not access contacts, location, camera, microphone or files.</p>
 
-<h2>Terms of Use (English)</h2>
-<p>By using MINDFLOW you accept these terms:</p>
-<p><strong>License.</strong> You are granted a personal, non-exclusive, non-transferable license to use the app for entertainment purposes.</p>
-<p><strong>Acceptable use.</strong> You may not decompile, modify, redistribute or commercially exploit the app.</p>
-<p><strong>Ads.</strong> The app may display third-party ads (Google AdMob). The developer is not responsible for the content of those ads.</p>
-<p><strong>Warranty.</strong> The app is provided "as is", without warranties of any kind. The developer shall not be liable for damages arising from its use.</p>
-<p><strong>Health.</strong> Play-time recommendations (30 minutes a day) are indicative and do not constitute medical advice.</p>
-<p><strong>Changes.</strong> These terms may be updated; the current version will always be available on this page.</p>
+  <h3>4. Children</h3>
+  <p>The app is not specifically directed at children under 6 and does not knowingly collect data from children.</p>
+
+  <h3>5. Contact</h3>
+  <p>For any privacy question: <a href="mailto:pvilardev@gmail.com">pvilardev@gmail.com</a></p>
+</section>
+
+<section class="card" id="terms-en">
+  <h2>Terms of Use <span class="badge">English</span></h2>
+  <p class="muted">By using MINDFLOW you accept these terms:</p>
+  <p><strong>License.</strong> You are granted a personal, non-exclusive, non-transferable license to use the app for entertainment purposes.</p>
+  <p><strong>Acceptable use.</strong> You may not decompile, modify, redistribute or commercially exploit the app.</p>
+  <p><strong>Ads.</strong> The app may display third-party ads (Google AdMob). The developer is not responsible for the content of those ads.</p>
+  <p><strong>Warranty.</strong> The app is provided "as is", without warranties of any kind. The developer shall not be liable for damages arising from its use.</p>
+  <p><strong>Health.</strong> Play-time recommendations (30 minutes a day) are indicative and do not constitute medical advice.</p>
+  <p><strong>Changes.</strong> These terms may be updated; the current version will always be available on this page.</p>
+</section>
+
+<footer>
+  MINDFLOW · © 2026 Pau Vilar · <a href="mailto:pvilardev@gmail.com">pvilardev@gmail.com</a>
+</footer>
+
 </div>
-
 </body>
 </html>
